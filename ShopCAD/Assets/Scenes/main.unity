@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 261769166}
   - component: {fileID: 261769165}
   - component: {fileID: 261769164}
+  - component: {fileID: 261769168}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -213,6 +214,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &261769168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 261769163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c276397ec352d4fa449a4b6342e205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  woodMat: {fileID: 1104818539}
+  metalMat: {fileID: 1414979104}
+  pvcMat: {fileID: 1890560674}
+  woodSpPan: {fileID: 1347040574}
+  metalSpPan: {fileID: 1097426206}
+  pvcSpPan: {fileID: 1866306191}
+  woodToolPan: {fileID: 1174086601}
+  metalToolPan: {fileID: 1786078349}
+  pvcToolPan: {fileID: 1420208142}
 --- !u!1 &395232546
 GameObject:
   m_ObjectHideFlags: 0

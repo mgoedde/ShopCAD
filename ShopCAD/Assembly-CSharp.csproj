@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\lockRotation.cs" />
      <Compile Include="Assets\Scripts\RotateAroundCamera.cs" />
+     <Compile Include="Assets\Scripts\uiChanger.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

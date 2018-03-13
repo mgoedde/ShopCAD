@@ -3,6 +3,9 @@
 
 public class RotateAroundCamera : MonoBehaviour
 {
+
+    public GameObject config;
+
     Camera cam;
     public bool isControlable;
     private Vector3 screenPoint;
@@ -22,11 +25,11 @@ public class RotateAroundCamera : MonoBehaviour
     float velocityX = 0.0f;
     float velocityY = 0.0f;
     float moveDirection = -1;
-    public float wheelSpeed = 2f;
-    public float orbitSpeed = 1f;
-    public float panSpeed = 2f;
-    public int orbitKey = 1;
-    public int panKey = 2;
+    public float wheelSpeed;
+    public float orbitSpeed;
+    public float panSpeed;
+    public int orbitKey;
+    public int panKey;
     public void SetControllable(bool value)
     {
         isControlable = value;
@@ -34,6 +37,14 @@ public class RotateAroundCamera : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        wheelSpeed = config.GetComponent<config>().wheelSpeed;
+        orbitSpeed = config.GetComponent<config>().orbitSpeed;
+        panSpeed = config.GetComponent<config>().panSpeed;
+        orbitKey = config.GetComponent<config>().orbitKey;
+        panKey = config.GetComponent<config>().panKey;
+
+
+
         cam = GetComponentInChildren<Camera>();
         Vector3 angles = transform.eulerAngles;
         rotationYAxis = (rotationYAxis == 0) ? angles.y : rotationYAxis;
@@ -47,6 +58,14 @@ public class RotateAroundCamera : MonoBehaviour
     }
     void LateUpdate()
     {
+
+        wheelSpeed = config.GetComponent<config>().wheelSpeed;
+        orbitSpeed = config.GetComponent<config>().orbitSpeed;
+        panSpeed = config.GetComponent<config>().panSpeed;
+        orbitKey = config.GetComponent<config>().orbitKey;
+        panKey = config.GetComponent<config>().panKey;
+
+
         if (target)
         {
             if (Input.GetMouseButton(orbitKey) && isControlable)
